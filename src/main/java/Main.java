@@ -9,11 +9,13 @@ public class Main {
         System.out.println("Enter Something: ");
         String userInput = scanner.nextLine();
         System.out.println("You Entered: " + userInput);
-        System.out.println(userInput + " is not a number");
-        System.out.println(StringUtils.swapCase(userInput));
-        System.out.println(StringUtils.reverse(userInput));
-
-
+        if (!StringUtils.isNumeric(userInput)) {
+            System.out.println(userInput + " is not a number");
+            System.out.println(StringUtils.swapCase(userInput));
+            System.out.println(StringUtils.reverse(userInput));
+        } else {
+            System.out.println("Invalid input");
+        }
 
     }
 
